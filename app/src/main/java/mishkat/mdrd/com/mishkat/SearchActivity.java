@@ -1,5 +1,6 @@
 package mishkat.mdrd.com.mishkat;
 
+import android.content.Intent;
 import android.support.design.widget.BottomSheetDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Spinner;
 
@@ -26,6 +28,7 @@ public class SearchActivity extends AppCompatActivity {
     Spinner Sp_country;
     List<String> cuntryArray = new ArrayList<>();
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +42,8 @@ public class SearchActivity extends AppCompatActivity {
         cuntryArray.add("Bneid Al Qar");
         cuntryArray.add("Daiya");
         cuntryArray.add("Deepak");
+
+
 
 
         verticalRecycle2.setAdapter(new SearchListAdapter());

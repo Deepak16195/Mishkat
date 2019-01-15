@@ -54,6 +54,7 @@
                     android:textSize="14sp" />
 
                 <ImageView
+                    android:id="@+id/popup"
                     android:layout_width="5dp"
                     android:layout_height="30dp"
                     android:layout_gravity="right|center"
@@ -64,7 +65,7 @@
             </LinearLayout>
 
             <ImageView
-                android:id="@+id/popup"
+
                 android:layout_width="5dp"
                 android:layout_height="30dp"
                 android:layout_gravity="right|center"
