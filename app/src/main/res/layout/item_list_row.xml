@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="5dp"
+    android:orientation="vertical"
+    app:cardUseCompatPadding="true">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/logo"
+            android:layout_width="75dp"
+            android:layout_height="80dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/tlogo"
+            app:riv_corner_radius_bottom_left="10dip"
+            app:riv_corner_radius_top_right="10dip" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="@+id/logo"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp"
+                android:weightSum="5">
+
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:fontFamily="@font/agencyr"
+                    android:text="Item Name Here"
+                    android:textColor="@color/textjont"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                    android:id="@+id/library_tinted_normal_ratingbar"
+                    style="@style/Widget.MaterialRatingBar.RatingBar.Indicator"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:isIndicator="true"
+                    android:maxHeight="18dp"
+                    android:minHeight="18dp"
+                    android:rating="4"
+                    android:stepSize="0.01"
+                    android:transformPivotX="0dp"
+                    android:transformPivotY="0dp"
+                    app:mrb_progressTint="@color/textjont"
+                    app:mrb_secondaryProgressTint="@color/textjont" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:background="@drawable/edittext_style"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/Category"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.5"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/agencyr"
+                    android:gravity="left|center"
+                    android:hint="@string/sorttext"
+                    android:maxLines="3"
+                    android:padding="5dp"
+                    android:textColor="@color/textjont"
+                    android:textColorHint="@color/black"
+                    android:textSize="12dp" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:background="@drawable/edittext_stylebutton"
+                    android:fontFamily="@font/agencyr"
+                    android:maxLines="2"
+                    android:padding="2dp"
+                    android:text="4.500 KD"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

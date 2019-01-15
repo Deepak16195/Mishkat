@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Mishkat</string>
+    <string name="Loginpage">  Accept.. Terms  &amp; Conditions  </string>
+
+    <string name="longtext">An introduction to operating systems with up - to - date and comprehensive coverage Now in its 9 th Edition, Operating Systems: Internals An introduction to operating systems with up -to - date and comprehensive coverage and Design Principles provides a comprehensive, unified introduction to operating systems topics for readers studying computer science, computer engineering, and electrical engineering.Author William Stallings emphasizes both design issues andfundamental principles in contemporary systems,while providing readers with asolid understanding of the key structures and mechanisms of operating systems.He discussesdesign trade -offs and the practical decisions affecting design, performance and security. An introduction to operating systems with up - to - date and comprehensive coverage Now in its 9 th Edition, Operating Systems: Internals An introduction to operating systems with up -to - date and comprehensive coverage and Design Principles provides a comprehensive, unified introduction to operating systems topics for readers studying computer science, computer engineering, and electrical engineering.Author William Stallings emphasizes both design issues andfundamental principles in contemporary systems,while providing readers with asolid understanding of the key structures and mechanisms of operating systems.He discussesdesign trade -offs and the practical decisions affecting design, performance and security. </string>
+    <string name="sorttext">Laravel is the top when it comes to PHP frameworks. There are multiple reasons for this. One of this being that it can handle heavy data with ease. This makes a perfect choice when you are dealing with applications with video steaming</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
