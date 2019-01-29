@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/mainbg"
-    tools:context=".LoginActivity"
+    tools:context=".EnteryPages.LoginActivity"
     tools:layout_editor_absoluteY="25dp">
 
 
@@ -66,6 +66,7 @@
                 android:fontFamily="@font/agencyr"
                 android:gravity="left|center"
                 android:hint="Mobile Number*"
+                android:text="7977805760"
                 android:maxLines="1"
                 android:paddingStart="30dp"
                 android:paddingLeft="30dp"

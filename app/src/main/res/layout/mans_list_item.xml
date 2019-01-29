@@ -12,7 +12,7 @@
         android:background="@drawable/edittext_stylewithoutline">
 
         <ImageView
-            android:id="@+id/Teacherimage"
+            android:id="@+id/Vender_Image"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:scaleType="fitXY"
@@ -23,7 +23,7 @@
             android:id="@+id/text"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/Teacherimage"
+            android:layout_alignBottom="@+id/Vender_Image"
             android:layout_gravity="center"
             android:alpha="0.7"
             android:background="@drawable/edittext_styleteacher"

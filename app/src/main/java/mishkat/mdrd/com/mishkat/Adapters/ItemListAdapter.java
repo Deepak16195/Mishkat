@@ -9,9 +9,11 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import mishkat.mdrd.com.mishkat.Item_Deatils_Activity;
+import java.util.List;
+
+import mishkat.mdrd.com.mishkat.DeskBoardsPages.VendorDetailModel;
+import mishkat.mdrd.com.mishkat.DeskBoardsPages.Item_Deatils_Activity;
 import mishkat.mdrd.com.mishkat.R;
-import mishkat.mdrd.com.mishkat.Teacher_DetailsActivity;
 
 /**
  * Created by rahuljanagouda on 04/11/17.
@@ -19,7 +21,9 @@ import mishkat.mdrd.com.mishkat.Teacher_DetailsActivity;
 
 public class ItemListAdapter extends RecyclerView.Adapter<ItemListAdapter.HorizontalViewHolder> {
 
-
+    private List<VendorDetailModel.ResultEntity> list;
+    Context mcontext;
+    public  List<VendorDetailModel.ResultEntity> ListFiltered;
     @Override
     public HorizontalViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
@@ -27,15 +31,21 @@ public class ItemListAdapter extends RecyclerView.Adapter<ItemListAdapter.Horizo
         return new HorizontalViewHolder(view);
     }
 
+    public ItemListAdapter(Context context, List<VendorDetailModel.ResultEntity> mlist) {
+        this.list = mlist;
+        this.mcontext = context;
+        this.ListFiltered = mlist;
+    }
+
     @Override
     public void onBindViewHolder(HorizontalViewHolder holder, int position) {
        /* holder.cardImage.setImageResource(R.drawable.phungdemac);*/
-        holder.cardTitle.setText("Item Name Here");
+        holder.cardTitle.setText(ListFiltered.get(position).getName()+"");
     }
 
     @Override
     public int getItemCount() {
-        return 25;
+        return ListFiltered.size();
     }
 
     class HorizontalViewHolder extends RecyclerView.ViewHolder {

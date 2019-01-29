@@ -61,13 +61,15 @@
             app:tabIndicatorColor="@android:color/white"
             app:tabIndicatorHeight="2dp"
             app:tabSelectedTextColor="@android:color/black"
-            app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+            app:tabTextAppearance="@style/tabLayoutTitles"
             app:tabTextColor="@android:color/black">
 
             <android.support.design.widget.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Boutiques" />
+
+
 
             <android.support.design.widget.TabItem
                 android:layout_width="wrap_content"
@@ -87,5 +89,11 @@
 
     </LinearLayout>
 
+    <View
+        android:layout_width="2dp"
+        android:layout_height="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="55dp"
+        android:background="@color/view" />
 
 </RelativeLayout>

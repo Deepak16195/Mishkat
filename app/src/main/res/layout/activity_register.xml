@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/mainbg"
-    tools:context=".RegisterActivity">
+    tools:context=".EnteryPages.RegisterActivity">
 
     <ImageView
         android:id="@+id/imageView2"
@@ -27,7 +27,7 @@
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
-        android:layout_height="347dp"
+        android:layout_height="357dp"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
         android:layout_marginEnd="24dp"
@@ -54,6 +54,7 @@
                 android:background="@drawable/accountbg" />
 
             <android.support.design.widget.TextInputEditText
+                android:id="@+id/Register_FName"
                 android:layout_width="287dp"
                 android:layout_height="45dp"
                 android:layout_marginLeft="10dp"
@@ -83,6 +84,7 @@
                 android:background="@drawable/accountbg" />
 
             <android.support.design.widget.TextInputEditText
+                android:id="@+id/Register_LName"
                 android:layout_width="287dp"
                 android:layout_height="45dp"
                 android:layout_marginLeft="10dp"
@@ -115,6 +117,7 @@
                 android:background="@drawable/emailbg" />
 
             <android.support.design.widget.TextInputEditText
+                android:id="@+id/Register_Email"
                 android:layout_width="287dp"
                 android:layout_height="45dp"
                 android:layout_marginLeft="10dp"
@@ -158,6 +161,7 @@
                 android:background="@drawable/mobilebg" />
 
             <android.support.design.widget.TextInputEditText
+                android:id="@+id/Register_Mobile"
                 android:layout_width="287dp"
                 android:layout_height="45dp"
                 android:layout_marginLeft="10dp"
@@ -175,6 +179,22 @@
                 android:textStyle="bold" />
         </LinearLayout>
 
+        <Button
+            android:id="@+id/Register_GetCode"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/buttonbg"
+            android:fontFamily="@font/agencyb"
+            android:text="Get Code"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="12dp"
+            android:textStyle="bold" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -187,6 +207,7 @@
                 android:background="@drawable/numberbg" />
 
             <android.support.design.widget.TextInputEditText
+                android:id="@+id/Register_Varification"
                 android:layout_width="287dp"
                 android:layout_height="45dp"
                 android:layout_marginLeft="10dp"
@@ -209,7 +230,7 @@
             android:layout_gravity="center"
             android:layout_margin="5dp"
             android:orientation="horizontal"
-            android:paddingTop="15dp">
+            android:paddingTop="10dp">
 
             <CheckBox
                 android:id="@+id/check"

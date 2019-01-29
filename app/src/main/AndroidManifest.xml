@@ -28,7 +28,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SplashActivity">
+        <activity android:name=".EnteryPages.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -36,20 +36,20 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".LoginActivity"
+            android:name=".EnteryPages.LoginActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".RegisterActivity"
+            android:name=".EnteryPages.RegisterActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".DeskboardActivity"
+            android:name=".DeskBoardsPages.DeskboardActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".SearchActivity"
             android:screenOrientation="portrait" />
         <activity android:name=".Teacher_DetailsActivity" />
-        <activity android:name=".Item_list_Activity" />
-        <activity android:name=".Item_Deatils_Activity" />
+        <activity android:name=".DeskBoardsPages.Item_list_Activity" />
+        <activity android:name=".DeskBoardsPages.Item_Deatils_Activity" />
         <activity android:name=".CartActivity" />
         <activity android:name=".CheckoutActivity" />
         <activity android:name=".OrderActivity" />
@@ -61,7 +61,8 @@
         <activity android:name=".Contact_UsActivity" />
         <activity android:name=".TermsandconditionsActivity" />
         <activity android:name=".PrivacyActivity" />
-        <activity android:name=".AboutUsActivity"></activity>
+        <activity android:name=".AboutUsActivity" />
+        <activity android:name=".EnteryPages.AdsActivity"></activity>
     </application>
 
 </manifest>

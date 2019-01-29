@@ -10,9 +10,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
-import mishkat.mdrd.com.mishkat.Item_list_Activity;
+import com.bumptech.glide.Glide;
+
+import java.util.List;
+
+import mishkat.mdrd.com.mishkat.DeskBoardsPages.GetAllVenderModel;
+import mishkat.mdrd.com.mishkat.DeskBoardsPages.Item_list_Activity;
 import mishkat.mdrd.com.mishkat.R;
-import mishkat.mdrd.com.mishkat.Teacher_DetailsActivity;
 
 /**
  * Created by rahuljanagouda on 04/11/17.
@@ -20,6 +24,9 @@ import mishkat.mdrd.com.mishkat.Teacher_DetailsActivity;
 
 public class TeacherListAdapter extends RecyclerView.Adapter<TeacherListAdapter.HorizontalViewHolder> {
 
+    private List<GetAllVenderModel.ResultEntity> list;
+    Context mcontext;
+    public List<GetAllVenderModel.ResultEntity> ListFiltered;
 
     @Override
     public HorizontalViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -28,30 +35,41 @@ public class TeacherListAdapter extends RecyclerView.Adapter<TeacherListAdapter.
         return new HorizontalViewHolder(view);
     }
 
+    public TeacherListAdapter(Context context, List<GetAllVenderModel.ResultEntity> mlist) {
+        this.list = mlist;
+        this.mcontext = context;
+        this.ListFiltered = mlist;
+    }
+
+
     @Override
     public void onBindViewHolder(HorizontalViewHolder holder, int position) {
-       /* holder.cardImage.setImageResource(R.drawable.phungdemac);*/
-        holder.cardTitle.setText("Teacher Name Here");
+        /* holder.cardImage.setImageResource(R.drawable.phungdemac);*/
+        holder.cardTitle.setText(ListFiltered.get(position).getName());
+        Glide.with(mcontext).load(ListFiltered.get(position).getLogo()).placeholder(R.drawable.face2).error(R.drawable.face2).into(holder.Vender_Image);
+
     }
 
     @Override
     public int getItemCount() {
-        return 8;
+        return ListFiltered.size();
     }
 
     class HorizontalViewHolder extends RecyclerView.ViewHolder {
-        ImageView cardImage;
+        ImageView Vender_Image;
         TextView cardTitle;
+
         public HorizontalViewHolder(View itemView) {
             super(itemView);
-          /*  cardImage = itemView.findViewById(R.id.image);*/
+            Vender_Image = itemView.findViewById(R.id.Vender_Image);
             cardTitle = itemView.findViewById(R.id.text);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
+                    int pos = getAdapterPosition();
                     Context context = v.getContext();
                     Intent intent = new Intent(context, Item_list_Activity.class);
+                    Item_list_Activity.Vanderid = Integer.valueOf(ListFiltered.get(pos).getVendor_id());
                     context.startActivity(intent);
 
                 }

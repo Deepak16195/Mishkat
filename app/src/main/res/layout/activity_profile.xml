@@ -32,7 +32,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="4" />
+                android:layout_gravity="center_vertical"
+                android:layout_weight="4"
+                android:fontFamily="@font/agencyb"
+                android:gravity="center|center_vertical"
+                android:text="MY PROFILE"
+                android:textAllCaps="true"
+                android:textColor="@color/textjont"
+                android:textSize="18dp" />
 
             <ImageView
                 android:layout_width="0dp"
@@ -176,55 +183,14 @@
                         android:textStyle="bold" />
                 </LinearLayout>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/agencyb"
-                    android:paddingStart="90dp"
-                    android:paddingLeft="90dp"
-                    android:text="OR"
-                    android:textColor="@color/textjont"
-                    android:textColorHint="@color/textjont"
-                    android:textSize="12dp"
-                    android:textStyle="bold"
-                    android:visibility="gone" />
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
+                    android:layout_marginTop="8dp"
                     android:layout_marginRight="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:orientation="horizontal"
-                    android:visibility="gone">
-
-                    <ImageButton
-                        android:layout_width="45dp"
-                        android:layout_height="45dp"
-                        android:background="@drawable/mobilebg" />
-
-                    <android.support.design.widget.TextInputEditText
-                        android:layout_width="287dp"
-                        android:layout_height="45dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_weight="2"
-                        android:background="@drawable/edittext_style"
-                        android:fontFamily="@font/agencyr"
-                        android:gravity="left|center"
-                        android:hint="Mobile Number"
-                        android:inputType="number"
-                        android:maxLines="1"
-                        android:paddingStart="30dp"
-                        android:paddingLeft="30dp"
-                        android:textColor="@color/textjont"
-                        android:textColorHint="@color/textjont"
-                        android:textStyle="bold" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
                     android:orientation="horizontal">
 
                     <ImageButton
@@ -240,7 +206,7 @@
                         android:background="@drawable/edittext_style"
                         android:fontFamily="@font/agencyr"
                         android:gravity="left|center"
-                        android:hint="91827164"
+                        android:hint="9702173103"
                         android:maxLines="1"
                         android:paddingStart="30dp"
                         android:paddingLeft="30dp"
@@ -249,67 +215,9 @@
                         android:textStyle="bold" />
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_margin="5dp"
-                    android:orientation="horizontal"
-                    android:paddingTop="15dp"
-                    android:visibility="gone">
-
-                    <CheckBox
-                        android:id="@+id/check"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_marginLeft="57dp"
-                        android:background="@drawable/checkbox_layout"
-                        android:button="@null"
-                        android:checked="true"
-                        android:gravity="center"
-                        android:padding="2dp"
-                        android:textColor="@color/black"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:id="@+id/textView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:fontFamily="@font/agencyr"
-                        android:text="Accept.. "
-                        android:textColor="@color/textjont"
-                        android:textSize="15dp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/terms"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/agencyb"
-                        android:text=" Terms  &amp; Conditions "
-                        android:textAllCaps="false"
-                        android:textColor="@color/textjont"
-                        android:textSize="16dp"
-                        android:textStyle="bold" />
 
 
-                    <TextView
 
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="15dp"
-                        android:fontFamily="@font/agencyb"
-                        android:gravity="left|center"
-                        android:text="@string/Loginpage"
-                        android:textColor="@color/textjont"
-                        android:textColorHint="@color/textjont"
-                        android:textSize="16dp"
-                        android:visibility="gone" />
-
-
-                </LinearLayout>
 
 
             </LinearLayout>

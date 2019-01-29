@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import mishkat.mdrd.com.mishkat.Item_Deatils_Activity;
+import mishkat.mdrd.com.mishkat.DeskBoardsPages.Item_Deatils_Activity;
 import mishkat.mdrd.com.mishkat.R;
 
 /**

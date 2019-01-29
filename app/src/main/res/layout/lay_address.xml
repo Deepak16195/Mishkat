@@ -55,7 +55,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/agencyr"
-                android:text="Offer"
+                android:text="Office"
                 android:textColor="@color/textjont"
                 android:textColorHint="@color/textjont"
                 android:textSize="24dp" />
@@ -135,7 +135,7 @@
     <TextView
         android:id="@+id/tx_Address"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
         android:layout_gravity="center"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="30dp"
@@ -155,7 +155,7 @@
     <Button
         android:id="@+id/Search"
         android:layout_width="match_parent"
-        android:layout_height="45dp"
+        android:layout_height="50dp"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="20dp"

@@ -23,7 +23,7 @@ import mishkat.mdrd.com.mishkat.R;
 public class Adapterviewpage extends PagerAdapter {
     private Context context;
     private List<Singer> singers;
-
+    private LayoutInflater layoutInflater;
     public Adapterviewpage(Context context, List<Singer> singers) {
         this.context = context;
         this.singers = singers;

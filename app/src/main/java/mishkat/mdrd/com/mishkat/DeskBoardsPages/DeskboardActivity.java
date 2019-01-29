@@ -1,13 +1,11 @@
-package mishkat.mdrd.com.mishkat;
+package mishkat.mdrd.com.mishkat.DeskBoardsPages;
 
 import android.animation.ArgbEvaluator;
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.media.Image;
 import android.support.design.widget.BottomSheetDialog;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -18,20 +16,30 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import mishkat.mdrd.com.mishkat.AboutUsActivity;
 import mishkat.mdrd.com.mishkat.Adapters.Adapterviewpage;
+import mishkat.mdrd.com.mishkat.Adapters.CatsListAdapter;
 import mishkat.mdrd.com.mishkat.Adapters.TeacherListAdapter;
+import mishkat.mdrd.com.mishkat.CartActivity;
+import mishkat.mdrd.com.mishkat.Contact_UsActivity;
 import mishkat.mdrd.com.mishkat.Model.Singer;
-import mishkat.mdrd.com.mishkat.banner.BannerView;
-
-import static android.widget.Toast.*;
+import mishkat.mdrd.com.mishkat.My_FavouriteActivity;
+import mishkat.mdrd.com.mishkat.OrderHistoryActivity;
+import mishkat.mdrd.com.mishkat.PrivacyActivity;
+import mishkat.mdrd.com.mishkat.ProfileActivity;
+import mishkat.mdrd.com.mishkat.R;
+import mishkat.mdrd.com.mishkat.SearchActivity;
+import mishkat.mdrd.com.mishkat.TermsandconditionsActivity;
+import mishkat.mdrd.com.mishkat.api.API;
+import rx.Subscriber;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.schedulers.Schedulers;
 
 /**
  * Created by Deepak Jaiswal on 15-0-2019.
@@ -50,7 +58,12 @@ public class DeskboardActivity extends AppCompatActivity {
     Integer[] colors = null;
     ArgbEvaluator argbEvaluator = new ArgbEvaluator();
     ImageView acv_drowmenu, Cart;
-
+    private int dotscount;
+    private ImageView[] dots;
+    LinearLayout sliderDotspanel;
+    public List<GetAllVenderModel.ResultEntity> AllVendeData = new ArrayList<>();
+    public List<CatsModel.ResultEntity> CatsData = new ArrayList<>();
+    RecyclerView VenderDetils;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,9 +72,12 @@ public class DeskboardActivity extends AppCompatActivity {
         Search = findViewById(R.id.Search);
         Cart = findViewById(R.id.Cart);
         mainDesk = findViewById(R.id.mainDesk);
+        sliderDotspanel = (LinearLayout) findViewById(R.id.SliderDots);
         /* initViews();*/
-        RecyclerView verticalRecycle2 = findViewById(R.id.Row1);
-        verticalRecycle2.setAdapter(new TeacherListAdapter());
+        GetAllVenderData();
+        GetcatsData();
+        VenderDetils= findViewById(R.id.Row1);
+
         Category.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -79,15 +95,7 @@ public class DeskboardActivity extends AppCompatActivity {
         Cart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                i = new Intent(DeskboardActivity.this, CartActivity.class);
-                startActivity(i);
-            }
-        });
 
-
-        mainDesk.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
                 BottomSheetDialog dialog = new BottomSheetDialog(DeskboardActivity.this, R.style.BottomSheetDialog);
                 dialog.setContentView(R.layout.lay_maindesk);
                 dialog.show();
@@ -159,6 +167,17 @@ public class DeskboardActivity extends AppCompatActivity {
                     }
                 });
 
+            }
+        });
+
+
+        mainDesk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                i = new Intent(DeskboardActivity.this, SearchActivity.class);
+                startActivity(i);
+
 
             }
         });
@@ -172,13 +191,50 @@ public class DeskboardActivity extends AppCompatActivity {
         adapter = new Adapterviewpage(this, singers);
         viewPager = findViewById(R.id.viewPager);
         viewPager.setAdapter(adapter);
-        viewPager.setPadding(20, 0, 30, 0);
+        dotscount = adapter.getCount();
+        dots = new ImageView[dotscount];
+
+        for (int i = 0; i < dotscount; i++) {
+
+            dots[i] = new ImageView(this);
+            dots[i].setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.non_active_dot));
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+            params.setMargins(8, 0, 8, 0);
+            sliderDotspanel.addView(dots[i], params);
+        }
+        dots[0].setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.active_dot));
+
+       /* viewPager.setPadding(20, 0, 30, 0);
         Integer[] color_temp = {getResources().getColor(R.color.white),
                 getResources().getColor(R.color.almostTransparentColor),
                 getResources().getColor(R.color.almostTransparentColor),
                 getResources().getColor(R.color.almostTransparentColor)};
-        colors = color_temp;
-        //  viewPager.setCurrentItem(1);
+        colors = color_temp;*/
+
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                for (int i = 0; i < dotscount; i++) {
+                    dots[i].setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.non_active_dot));
+                }
+                dots[position].setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.active_dot));
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int position) {
+
+
+            }
+        });
+    }
+
+
+    //  viewPager.setCurrentItem(1);
        /* viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -204,7 +260,7 @@ public class DeskboardActivity extends AppCompatActivity {
         });*/
 
 
-    }
+
 
      /*  private void initViews() {
         List<BannerView.BannerItem> bannerItems = new ArrayList<>();
@@ -268,9 +324,53 @@ public class DeskboardActivity extends AppCompatActivity {
         //  layoutParams.height = dialogWindowHeight;
         // Apply the newly created layout parameters to the alert dialog window
         dialog.getWindow().setAttributes(layoutParams);
+        RecyclerView verticalRecycle2 = alertLayout.findViewById(R.id.Row1);
 
+        verticalRecycle2.setAdapter(new CatsListAdapter(DeskboardActivity.this, CatsData));
 
+    };
+    private void GetcatsData() {
+        API.getAPIService().Getcats().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Subscriber<CatsModel>() {
+                    @Override
+                    public void onCompleted() {
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                    }
+
+                    @Override
+                    public void onNext(CatsModel response) {
+                        if (response.getStatus()) {
+                            if (response.getResult().size() > 0) {
+                                CatsData = response.getResult();
+                            }
+                        }
+                    }
+                });
     }
 
-    ;
+    private void GetAllVenderData() {
+        API.getAPIService().GetAllVender().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Subscriber<GetAllVenderModel>() {
+                    @Override
+                    public void onCompleted() {
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                    }
+
+                    @Override
+                    public void onNext(GetAllVenderModel response) {
+                        if (response.getStatus()) {
+                            if (response.getResult().size() > 0) {
+                                AllVendeData = response.getResult();
+                                VenderDetils.setAdapter(new TeacherListAdapter(DeskboardActivity.this,AllVendeData));
+                            }
+                        }
+                    }
+                });
+    }
 }

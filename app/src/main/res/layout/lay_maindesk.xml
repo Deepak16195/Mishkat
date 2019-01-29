@@ -14,7 +14,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="480dp"
+            android:layout_height="500dp"
             android:orientation="vertical">
 
             <ScrollView
@@ -83,7 +83,7 @@
                                 android:layout_alignParentRight="true"
                                 android:layout_gravity="right"
                                 android:paddingRight="15dp"
-                                app:srcCompat="@drawable/logo" />
+                                app:srcCompat="@drawable/logo2" />
 
 
                         </RelativeLayout>
@@ -100,7 +100,7 @@
 
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/agencyb"
                             android:padding="5dp"
@@ -111,7 +111,7 @@
 
                         <TextView
                             android:id="@+id/tx_profile"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/agencyb"
                             android:padding="5dp"
@@ -122,7 +122,7 @@
 
                         <TextView
                             android:id="@+id/tx_Favouraite"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/agencyb"
                             android:padding="5dp"
@@ -134,13 +134,13 @@
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="2dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
                             android:background="@color/view" />
 
                         <TextView
                             android:id="@+id/Tx_Cart"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/agencyb"
                             android:padding="5dp"
@@ -151,7 +151,7 @@
 
                         <TextView
                             android:id="@+id/Tx_Orderhistory"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/agencyb"
                             android:padding="5dp"
@@ -163,7 +163,7 @@
 
                         <TextView
                             android:id="@+id/Tx_contactus"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/agencyb"
                             android:padding="5dp"
@@ -176,14 +176,14 @@
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="2dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
                             android:background="@color/view" />
 
 
                         <TextView
                             android:id="@+id/Tx_terms"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/agencyb"
                             android:padding="5dp"
@@ -194,7 +194,7 @@
 
                         <TextView
                             android:id="@+id/Tx_privacy"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/agencyb"
                             android:padding="5dp"
@@ -203,16 +203,34 @@
                             android:textSize="20dp"
                             android:textStyle="bold" />
 
-                        <TextView
-                            android:id="@+id/Tx_Aboutus"
-                            android:layout_width="wrap_content"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/agencyb"
-                            android:padding="5dp"
-                            android:text="About Miskat"
-                            android:textColor="@color/white"
-                            android:textSize="20dp"
-                            android:textStyle="bold" />
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+
+                            <TextView
+                                android:id="@+id/Tx_Aboutus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/agencyb"
+                                android:padding="5dp"
+                                android:text="About Meshkat"
+                                android:textColor="@color/white"
+                                android:textSize="20dp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:padding="7dp"
+                                app:srcCompat="@drawable/arbic" />
+
+
+                        </LinearLayout>
 
 
                     </LinearLayout>

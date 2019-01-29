@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/mainbg"
     android:orientation="vertical"
-    tools:context=".DeskboardActivity">
+    tools:context=".DeskBoardsPages.DeskboardActivity">
 
 
     <LinearLayout
@@ -71,53 +71,74 @@
                     android:gravity="center" />
             </RelativeLayout>
 
-            <android.support.v4.view.ViewPager
-                android:id="@+id/viewPager"
+            <!-- <android.support.v4.view.ViewPager
+                 android:id="@+id/viewPager"
+                 android:layout_width="match_parent"
+                 android:layout_height="230dp"
+                 android:layout_centerInParent="true"
+                 android:layout_marginTop="5dp"
+                 android:visibility="gone"
+                 android:background="@android:color/transparent"
+                 android:clipToPadding="false"
+                 android:foregroundGravity="center"
+                 android:overScrollMode="never" />-->
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="230dp"
-                android:layout_centerInParent="true"
-                android:layout_marginTop="5dp"
-                android:background="@android:color/transparent"
-                android:clipToPadding="false"
-                android:foregroundGravity="center"
-                android:overScrollMode="never" />
+                android:layout_height="210dp">
 
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:paddingLeft="100dp"
-                android:paddingRight="100dp">
-
-
-                <ImageView
-                    android:layout_width="15dp"
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="190dp" />
+                <LinearLayout
+                    android:id="@+id/SliderDots"
+                    android:layout_width="match_parent"
                     android:layout_height="15dp"
-                    android:layout_margin="5dp"
-                    android:src="@drawable/banner_indicator_selector" />
+                    android:layout_below="@+id/viewPager"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="horizontal" />
 
-                <ImageView
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
-                    android:layout_margin="5dp"
-                    android:src="@drawable/bannerunselected" />
 
-                <ImageView
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
-                    android:layout_margin="5dp"
-                    android:src="@drawable/bannerunselected" />
+            </RelativeLayout>
 
-                <ImageView
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
-                    android:layout_margin="5dp"
-                    android:src="@drawable/bannerunselected" />
 
-            </LinearLayout>
+            <!--   <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   android:gravity="center"
+                   android:orientation="horizontal"
+                   android:paddingLeft="100dp"
+                   android:paddingRight="100dp">
+
+
+                   <ImageView
+                       android:layout_width="15dp"
+                       android:layout_height="15dp"
+                       android:layout_margin="5dp"
+                       android:src="@drawable/banner_indicator_selector" />
+
+                   <ImageView
+                       android:layout_width="15dp"
+                       android:layout_height="15dp"
+                       android:layout_margin="5dp"
+                       android:src="@drawable/bannerunselected" />
+
+                   <ImageView
+                       android:layout_width="15dp"
+                       android:layout_height="15dp"
+                       android:layout_margin="5dp"
+                       android:src="@drawable/bannerunselected" />
+
+                   <ImageView
+                       android:layout_width="15dp"
+                       android:layout_height="15dp"
+                       android:layout_margin="5dp"
+                       android:src="@drawable/bannerunselected" />
+
+               </LinearLayout>-->
 
 
         </LinearLayout>

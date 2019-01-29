@@ -12,191 +12,212 @@
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:orientation="vertical"
         android:layout_height="wrap_content">
 
-        <com.makeramen.roundedimageview.RoundedImageView
-            android:id="@+id/logo"
-            android:layout_width="80dp"
-            android:layout_height="100dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerVertical="true"
-            android:scaleType="centerCrop"
-            android:src="@drawable/tlogo"
-            app:riv_corner_radius_bottom_left="10dip"
-            app:riv_corner_radius_top_right="10dip" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:text="Aug 19 2018"
+            android:layout_gravity="center"
+            android:fontFamily="@font/agencyr"
+            android:gravity="center_vertical|center"
+            android:textColor="@color/textjont"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_height="wrap_content" />
 
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignParentRight="@+id/logo"
-            android:layout_marginLeft="10dp"
-            android:orientation="vertical">
+            android:layout_height="wrap_content">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="5">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="4.7"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="5"
-                        android:fontFamily="@font/agencyr"
-                        android:gravity="left|center"
-                        android:text="Boutiqe Name"
-                        android:textColor="@color/textjont"
-                        android:textSize="15dp"
-                        android:textStyle="bold"
-                        android:visibility="gone" />
-
-                    <View
-                        android:layout_width="1dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginRight="8dp"
-                        android:layout_marginBottom="5dp"
-                        android:background="@color/textjont"
-                        android:visibility="gone" />
-
-                    <TextView
-                        android:id="@+id/text"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="5"
-                        android:fontFamily="@font/agencyr"
-                        android:gravity="left|center"
-                        android:text="Item Name here"
-                        android:textColor="@color/textjont"
-                        android:textSize="15dp"
-                        android:textStyle="bold" />
-
-
-                </LinearLayout>
-
-                <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="right"
-                    android:layout_weight=".2"
-                    android:src="@drawable/cancel"
-                    android:visibility="invisible" />
-
-
-            </LinearLayout>
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/logo"
+                android:layout_width="80dp"
+                android:layout_height="100dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/tlogo"
+                app:riv_corner_radius_bottom_left="10dip"
+                app:riv_corner_radius_top_right="10dip" />
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="60dp"
-                    android:layout_height="match_parent"
-                    android:fontFamily="@font/agencyr"
-                    android:gravity="left|top"
-                    android:text="Special Note :"
-                    android:textColor="@color/black"
-                    android:textSize="13dp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/Category"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="2.5"
-                    android:ellipsize="end"
-                    android:fontFamily="@font/agencyr"
-                    android:gravity="left|top"
-                    android:hint="@string/sorttext"
-                    android:maxLines="3"
-                    android:textColor="@color/textjont"
-                    android:textColorHint="@color/black"
-                    android:textSize="12dp" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:weightSum="2">
+                android:layout_alignParentRight="@+id/logo"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
 
                 <LinearLayout
-                    android:layout_width="80dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1">
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4.7"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="5"
+                            android:fontFamily="@font/agencyr"
+                            android:gravity="left|center"
+                            android:text="Boutiqe Name"
+                            android:textColor="@color/textjont"
+                            android:textSize="15dp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@color/textjont"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/text"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="5"
+                            android:fontFamily="@font/agencyr"
+                            android:gravity="left|center"
+                            android:text="Item Name here"
+                            android:textColor="@color/textjont"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
 
 
-                    <TextView
-                        android:layout_width="30dp"
-                        android:layout_height="25dp"
-                        android:layout_gravity="center"
+                    </LinearLayout>
 
-                        android:layout_marginRight="5dp"
-                        android:background="@drawable/edittext_style"
-                        android:fontFamily="@font/hacenbeirutlight"
-                        android:gravity="center"
-                        android:maxLines="1"
-                        android:text="-"
-                        android:textColor="@color/textjont"
-                        android:textStyle="bold" />
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="right"
+                        android:layout_weight=".2"
+                        android:src="@drawable/cancel"
+                        android:visibility="invisible" />
 
-                    <TextView
-                        android:layout_width="80dp"
-                        android:layout_height="25dp"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:background="@drawable/edittext_style"
-                        android:fontFamily="@font/agencyr"
-                        android:gravity="center"
-                        android:maxLines="1"
-                        android:text="1"
-                        android:textColor="@color/textjont"
-                        android:textStyle="bold" />
-
-
-                    <TextView
-                        android:layout_width="30dp"
-                        android:layout_height="25dp"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:background="@drawable/edittext_style"
-                        android:fontFamily="@font/hacenbeirutlight"
-                        android:gravity="center"
-                        android:text="+"
-                        android:textColor="@color/textjont"
-                        android:textStyle="bold" />
 
                 </LinearLayout>
 
 
-                <Button
-                    android:layout_width="0dp"
-                    android:layout_height="25dp"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/edittext_stylebutton"
-                    android:fontFamily="@font/agencyr"
-                    android:maxLines="2"
-                    android:text="4.500 KD"
-                    android:textColor="@color/white"
-                    android:textSize="15dp"
-                    android:textStyle="bold" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/agencyr"
+                        android:gravity="left|top"
+                        android:text="Special Note :"
+                        android:textColor="@color/black"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/Category"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.5"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/agencyr"
+                        android:gravity="left|top"
+                        android:hint="@string/sorttext"
+                        android:maxLines="2"
+                        android:textColor="@color/textjont"
+                        android:textColorHint="@color/black"
+                        android:textSize="12dp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+
+                        <TextView
+                            android:layout_width="30dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center"
+
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/edittext_styleminus"
+                            android:fontFamily="@font/hacenbeirutlight"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:text="-"
+                            android:textColor="@color/textjont"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/edittext_style"
+                            android:fontFamily="@font/agencyr"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:text="1"
+                            android:textColor="@color/textjont"
+                            android:textStyle="bold" />
+
+
+                        <TextView
+                            android:layout_width="30dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/edittext_styleplus"
+                            android:fontFamily="@font/hacenbeirutlight"
+                            android:gravity="center"
+                            android:text="+"
+                            android:textColor="@color/textjont"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittext_stylebutton"
+                        android:fontFamily="@font/agencyr"
+                        android:maxLines="2"
+                        android:text="4.500 KD"
+                        android:textColor="@color/white"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
 
 
             </LinearLayout>
@@ -206,5 +227,7 @@
 
 
     </LinearLayout>
+
+
 
 </RelativeLayout>

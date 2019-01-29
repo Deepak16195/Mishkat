@@ -116,7 +116,7 @@
                     android:fontFamily="@font/agencyr"
                     android:gravity="left|top"
                     android:hint="@string/sorttext"
-                    android:maxLines="3"
+                    android:maxLines="2"
                     android:textColor="@color/textjont"
                     android:textColorHint="@color/black"
                     android:textSize="12dp" />
@@ -139,9 +139,8 @@
                         android:layout_width="30dp"
                         android:layout_height="25dp"
                         android:layout_gravity="center"
-
                         android:layout_marginRight="5dp"
-                        android:background="@drawable/edittext_style"
+                        android:background="@drawable/edittext_styleminus"
                         android:fontFamily="@font/hacenbeirutlight"
                         android:gravity="center"
                         android:maxLines="1"
@@ -170,7 +169,7 @@
                         android:layout_gravity="center"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
-                        android:background="@drawable/edittext_style"
+                        android:background="@drawable/edittext_styleplus"
                         android:fontFamily="@font/hacenbeirutlight"
                         android:gravity="center"
                         android:text="+"
