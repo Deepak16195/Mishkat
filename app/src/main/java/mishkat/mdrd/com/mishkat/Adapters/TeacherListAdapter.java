@@ -14,7 +14,7 @@ import com.bumptech.glide.Glide;
 
 import java.util.List;
 
-import mishkat.mdrd.com.mishkat.DeskBoardsPages.GetAllVenderModel;
+import mishkat.mdrd.com.mishkat.SearchVanders.Models.GetAllVenderModel;
 import mishkat.mdrd.com.mishkat.DeskBoardsPages.Item_list_Activity;
 import mishkat.mdrd.com.mishkat.R;
 

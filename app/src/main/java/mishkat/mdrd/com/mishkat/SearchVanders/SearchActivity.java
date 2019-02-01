@@ -1,14 +1,13 @@
-package mishkat.mdrd.com.mishkat;
+package mishkat.mdrd.com.mishkat.SearchVanders;
 
-import android.content.Intent;
 import android.support.design.widget.BottomSheetDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Spinner;
 
@@ -16,9 +15,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import mishkat.mdrd.com.mishkat.Adapters.SearchListAdapter;
-import mishkat.mdrd.com.mishkat.Adapters.TeacherListAdapter;
-import mishkat.mdrd.com.mishkat.DeskBoardsPages.GetAllVenderModel;
-import mishkat.mdrd.com.mishkat.EnteryPages.Model.AreasModel;
+import mishkat.mdrd.com.mishkat.Profile.ProfileActivity;
+import mishkat.mdrd.com.mishkat.SearchVanders.Models.GetAllVenderModel;
+import mishkat.mdrd.com.mishkat.SearchVanders.Models.AreasModel;
+import mishkat.mdrd.com.mishkat.R;
+import mishkat.mdrd.com.mishkat.UtilsTools.UtilsTool;
 import mishkat.mdrd.com.mishkat.api.API;
 import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
@@ -69,6 +70,7 @@ public class SearchActivity extends AppCompatActivity {
     }
 
     private void GetAllVenderData() {
+        UtilsTool.showProgressDialog(SearchActivity.this);
         API.getAPIService().GetAllVender().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Subscriber<GetAllVenderModel>() {
                     @Override
@@ -77,10 +79,13 @@ public class SearchActivity extends AppCompatActivity {
 
                     @Override
                     public void onError(Throwable e) {
+                        UtilsTool.hideProgressDialog();
+                        Log.e("retro_error", e.toString());
                     }
 
                     @Override
                     public void onNext(GetAllVenderModel response) {
+                        UtilsTool.hideProgressDialog();
                         if (response.getStatus()) {
                             if (response.getResult().size() > 0) {
                                 AllVendeData = response.getResult();

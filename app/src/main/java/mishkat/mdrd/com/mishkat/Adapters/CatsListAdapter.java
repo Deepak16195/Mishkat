@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import mishkat.mdrd.com.mishkat.DeskBoardsPages.CatsModel;
+import mishkat.mdrd.com.mishkat.DeskBoardsPages.Models.CatsModel;
 import mishkat.mdrd.com.mishkat.R;
 
 /**

@@ -181,7 +181,7 @@ public class RegisterActivity extends AppCompatActivity {
                         } else {
                             UtilsTool.hideProgressDialog();
 
-                            UtilsTool.custoAlert(RegisterActivity.this, "User is already registered...");
+                            UtilsTool.custoAlert(RegisterActivity.this, response.getMessage());
 
                         }
 

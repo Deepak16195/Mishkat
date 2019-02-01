@@ -5,12 +5,12 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public  class AreasModel {
+public  class AdsModel {
 
 
     @Expose
     @SerializedName("result")
-    private List<ResultEntity> result;
+    private List<String> result;
     @Expose
     @SerializedName("message")
     private String message;
@@ -18,11 +18,11 @@ public  class AreasModel {
     @SerializedName("status")
     private boolean status;
 
-    public List<ResultEntity> getResult() {
+    public List<String> getResult() {
         return result;
     }
 
-    public void setResult(List<ResultEntity> result) {
+    public void setResult(List<String> result) {
         this.result = result;
     }
 
@@ -40,30 +40,5 @@ public  class AreasModel {
 
     public void setStatus(boolean status) {
         this.status = status;
-    }
-
-    public static class ResultEntity {
-        @Expose
-        @SerializedName("name")
-        private String name;
-        @Expose
-        @SerializedName("id")
-        private String id;
-
-        public String getName() {
-            return name;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
-
-        public String getId() {
-            return id;
-        }
-
-        public void setId(String id) {
-            this.id = id;
-        }
     }
 }

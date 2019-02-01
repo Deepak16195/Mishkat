@@ -46,6 +46,7 @@
         </LinearLayout>
 
         <ImageView
+            android:id="@+id/Edit"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_gravity="center_vertical"
@@ -54,6 +55,7 @@
             android:src="@drawable/editicon" />
 
         <ImageView
+            android:id="@+id/Delete_Addreess"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_gravity="center_vertical"

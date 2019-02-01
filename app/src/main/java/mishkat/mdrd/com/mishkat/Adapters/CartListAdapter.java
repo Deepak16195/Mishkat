@@ -1,7 +1,5 @@
 package mishkat.mdrd.com.mishkat.Adapters;
 
-import android.content.Context;
-import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,7 +8,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import mishkat.mdrd.com.mishkat.R;
-import mishkat.mdrd.com.mishkat.Teacher_DetailsActivity;
 
 /**
  * Created by rahuljanagouda on 04/11/17.

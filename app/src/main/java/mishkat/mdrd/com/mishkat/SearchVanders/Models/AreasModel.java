@@ -1,11 +1,11 @@
-package mishkat.mdrd.com.mishkat.DeskBoardsPages;
+package mishkat.mdrd.com.mishkat.SearchVanders.Models;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public  class CatsModel {
+public  class AreasModel {
 
 
     @Expose
@@ -47,8 +47,8 @@ public  class CatsModel {
         @SerializedName("name")
         private String name;
         @Expose
-        @SerializedName("cat_id")
-        private String cat_id;
+        @SerializedName("id")
+        private String id;
 
         public String getName() {
             return name;
@@ -58,12 +58,12 @@ public  class CatsModel {
             this.name = name;
         }
 
-        public String getCat_id() {
-            return cat_id;
+        public String getId() {
+            return id;
         }
 
-        public void setCat_id(String cat_id) {
-            this.cat_id = cat_id;
+        public void setId(String id) {
+            this.id = id;
         }
     }
 }

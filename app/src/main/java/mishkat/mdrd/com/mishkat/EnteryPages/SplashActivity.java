@@ -7,8 +7,6 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 
-import mishkat.mdrd.com.mishkat.DeskBoardsPages.CatsModel;
-import mishkat.mdrd.com.mishkat.EnteryPages.LoginActivity;
 import mishkat.mdrd.com.mishkat.EnteryPages.Model.SplashModel;
 import mishkat.mdrd.com.mishkat.R;
 import mishkat.mdrd.com.mishkat.api.API;
@@ -42,7 +40,7 @@ public class SplashActivity extends AppCompatActivity {
 //        }else {
 //            i= new Intent(this,IntroActivity.class);
 //        }
-        i = new Intent(this, LoginActivity.class);
+        i = new Intent(this, AdsActivity.class);
         Thread timer = new Thread() {
             public void run() {
                 try {

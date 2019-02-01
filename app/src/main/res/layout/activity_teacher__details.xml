@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Teacher_DetailsActivity">
+    tools:context=".SearchVanders.Teacher_DetailsActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -55,9 +55,10 @@
                 android:layout_height="wrap_content">
 
                 <com.makeramen.roundedimageview.RoundedImageView
-                    android:id="@+id/image"
+                    android:id="@+id/Banner"
                     android:layout_width="match_parent"
                     android:layout_height="130dp"
+                    android:layout_alignParentStart="true"
                     android:layout_marginTop="30dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/tech"
@@ -65,6 +66,7 @@
                     app:riv_corner_radius_top_right="10dip" />
 
                 <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/VanderLogo"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_alignParentTop="true"
@@ -84,6 +86,7 @@
 
 
                     <TextView
+                        android:id="@+id/vandername"
                         android:layout_width="30dp"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="20dp"
@@ -96,7 +99,7 @@
 
 
                     <me.zhanghai.android.materialratingbar.MaterialRatingBar
-                        android:id="@+id/library_tinted_normal_ratingbar"
+                        android:id="@+id/rating"
                         style="@style/Widget.MaterialRatingBar.RatingBar.Indicator"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -121,7 +124,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/image"
+                    android:layout_alignBottom="@+id/Banner"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="30dp"
                     android:alpha="0.7"
@@ -132,6 +135,7 @@
 
 
                     <TextView
+                        android:id="@+id/Mini_Order"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -145,7 +149,7 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/text"
+                        android:id="@+id/Openstatus"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -160,6 +164,7 @@
 
 
                     <TextView
+                        android:id="@+id/D_Time"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -186,6 +191,7 @@
             android:padding="5dp">
 
             <TextView
+
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/agencyb"
@@ -200,6 +206,7 @@
                 android:background="@color/viewbg" />
 
             <TextView
+                android:id="@+id/About_me"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/agencyr"
@@ -218,36 +225,42 @@
 
 
             <ImageButton
+                android:id="@+id/fb"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_margin="10dp"
                 android:background="@drawable/fb" />
 
             <ImageButton
+                android:id="@+id/snap"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_margin="10dp"
                 android:background="@drawable/snap" />
 
             <ImageButton
+                android:id="@+id/intra"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_margin="10dp"
                 android:background="@drawable/instra" />
 
             <View
+
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
                 android:layout_margin="10dp"
                 android:background="@color/viewbg" />
 
             <ImageButton
+                android:id="@+id/share"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_margin="10dp"
                 android:background="@drawable/share" />
 
             <ImageButton
+                android:id="@+id/fav"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_margin="10dp"

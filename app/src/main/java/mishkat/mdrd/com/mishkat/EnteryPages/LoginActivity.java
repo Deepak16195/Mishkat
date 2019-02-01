@@ -6,6 +6,7 @@ import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -109,6 +110,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
     private void VerifyNumber(String mobile, String code, String device_id) {
+        UtilsTool.showProgressDialog(LoginActivity.this);
         API.getAPIService().VerifyRegister(mobile, code, device_id).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Subscriber<VerifyModel>() {
                     @Override
@@ -118,10 +120,14 @@ public class LoginActivity extends AppCompatActivity {
 
                     @Override
                     public void onError(Throwable e) {
+                        UtilsTool.custoAlert(LoginActivity.this, e.getMessage());
+                        UtilsTool.hideProgressDialog();
+                        Log.e("retro_error", e.toString());
                     }
 
                     @Override
                     public void onNext(VerifyModel response) {
+                        UtilsTool.hideProgressDialog();
                         if (response.getStatus()) {
 
                             Userid = Integer.valueOf(response.getResult().getId());

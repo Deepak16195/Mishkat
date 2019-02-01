@@ -27,7 +27,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:targetSandboxVersion="1"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
         <activity android:name=".EnteryPages.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -45,24 +47,25 @@
             android:name=".DeskBoardsPages.DeskboardActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".SearchActivity"
+            android:name=".SearchVanders.SearchActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".Teacher_DetailsActivity" />
+        <activity android:name=".SearchVanders.Teacher_DetailsActivity" />
         <activity android:name=".DeskBoardsPages.Item_list_Activity" />
         <activity android:name=".DeskBoardsPages.Item_Deatils_Activity" />
         <activity android:name=".CartActivity" />
         <activity android:name=".CheckoutActivity" />
         <activity android:name=".OrderActivity" />
-        <activity android:name=".ProfileActivity" />
-        <activity android:name=".My_AddressActivity" />
-        <activity android:name=".Add_AddressActivity" />
+        <activity android:name=".Profile.ProfileActivity" />
+        <activity android:name=".Address.My_AddressActivity" />
+        <activity android:name=".Address.Add_AddressActivity" />
         <activity android:name=".My_FavouriteActivity" />
         <activity android:name=".OrderHistoryActivity" />
         <activity android:name=".Contact_UsActivity" />
-        <activity android:name=".TermsandconditionsActivity" />
-        <activity android:name=".PrivacyActivity" />
-        <activity android:name=".AboutUsActivity" />
-        <activity android:name=".EnteryPages.AdsActivity"></activity>
+        <activity android:name=".AboutApp.TermsandconditionsActivity" />
+        <activity android:name=".AboutApp.PrivacyActivity" />
+        <activity android:name=".AboutApp.AboutUsActivity" />
+        <activity android:name=".EnteryPages.AdsActivity" />
+        <activity android:name=".Address.EditAddreessActivity"></activity>
     </application>
 
 </manifest>

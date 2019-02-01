@@ -8,7 +8,7 @@ public  class LoginModel {
 
     @Expose
     @SerializedName("errors")
-    private String errors;
+    private ErrorsEntity errors;
     @Expose
     @SerializedName("result")
     private ResultEntity result;
@@ -19,11 +19,11 @@ public  class LoginModel {
     @SerializedName("status")
     private boolean status;
 
-    public String getErrors() {
+    public ErrorsEntity getErrors() {
         return errors;
     }
 
-    public void setErrors(String errors) {
+    public void setErrors(ErrorsEntity errors) {
         this.errors = errors;
     }
 
@@ -49,6 +49,9 @@ public  class LoginModel {
 
     public void setStatus(boolean status) {
         this.status = status;
+    }
+
+    public static class ErrorsEntity {
     }
 
     public static class ResultEntity {

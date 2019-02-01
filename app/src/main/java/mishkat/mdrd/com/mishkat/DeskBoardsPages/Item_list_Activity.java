@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import mishkat.mdrd.com.mishkat.Adapters.ItemListAdapter;
+import mishkat.mdrd.com.mishkat.DeskBoardsPages.Models.VendorDetailModel;
 import mishkat.mdrd.com.mishkat.R;
 import mishkat.mdrd.com.mishkat.api.API;
 import rx.Subscriber;

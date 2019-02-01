@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import mishkat.mdrd.com.mishkat.DeskBoardsPages.VendorDetailModel;
+import mishkat.mdrd.com.mishkat.DeskBoardsPages.Models.VendorDetailModel;
 import mishkat.mdrd.com.mishkat.DeskBoardsPages.Item_Deatils_Activity;
 import mishkat.mdrd.com.mishkat.R;
 

@@ -14,10 +14,9 @@ import com.bumptech.glide.Glide;
 import java.util.List;
 
 import me.zhanghai.android.materialratingbar.MaterialRatingBar;
-import mishkat.mdrd.com.mishkat.DeskBoardsPages.GetAllVenderModel;
-import mishkat.mdrd.com.mishkat.DeskBoardsPages.VendorDetailModel;
+import mishkat.mdrd.com.mishkat.SearchVanders.Models.GetAllVenderModel;
 import mishkat.mdrd.com.mishkat.R;
-import mishkat.mdrd.com.mishkat.Teacher_DetailsActivity;
+import mishkat.mdrd.com.mishkat.SearchVanders.Teacher_DetailsActivity;
 
 /**
  * Created by rahuljanagouda on 04/11/17.
@@ -48,7 +47,7 @@ public class SearchListAdapter extends RecyclerView.Adapter<SearchListAdapter.Ho
         holder.VanderName.setText(ListFiltered.get(position).getName() + "");
         holder.Mini_Order.setText("Minimum Order : " + ListFiltered.get(position).getMin_order() + "");
         holder.D_Time.setText("Delivery Time: " + ListFiltered.get(position).getDelivery_time() + "");
-        holder.RatingBar.setNumStars(Integer.valueOf(ListFiltered.get(position).getRate()));
+        holder.RatingBar.setRating(Integer.valueOf(ListFiltered.get(position).getRate()));
         Glide.with(mcontext).load(ListFiltered.get(position).getLogo()).placeholder(R.drawable.tlogo).error(R.drawable.tlogo).into(holder.Logo);
         Glide.with(mcontext).load(ListFiltered.get(position).getBanner()).placeholder(R.drawable.tech).error(R.drawable.tech).into(holder.Banner);
         String Open =ListFiltered.get(position).getOpen_status();
@@ -84,7 +83,9 @@ public class SearchListAdapter extends RecyclerView.Adapter<SearchListAdapter.Ho
                 @Override
                 public void onClick(View v) {
                     Context context = v.getContext();
+                    int pos=getAdapterPosition();
                     Intent intent = new Intent(context, Teacher_DetailsActivity.class);
+                    Teacher_DetailsActivity.Vanderid = Integer.valueOf(ListFiltered.get(pos).getVendor_id());
                     context.startActivity(intent);
 
                 }
